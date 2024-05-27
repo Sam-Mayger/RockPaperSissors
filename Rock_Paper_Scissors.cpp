@@ -7,7 +7,7 @@
 
 using namespace std;
 
-bool is_file_exist(string fileName)
+bool if_file_exist(string fileName)
 {
     std::ifstream infile(fileName);
     return infile.good();
@@ -62,7 +62,7 @@ void game()
     int wins;
     int loses;
     int draws;
-    if(is_file_exist("stats.txt")){
+    if(if_file_exist("stats.txt")){
         deque<int> stats;
         ifstream file("stats.txt");
         int stat;
